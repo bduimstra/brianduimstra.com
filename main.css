@@ -10,6 +10,8 @@
 body {
   font-size: 100%;
   font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 header h1 {
   color: #c5c5c5;
@@ -36,4 +38,11 @@ main p {
   color: #787878;
   font-size: 1em;
   margin: .25em 0;
+}
+footer {
+  background-color: #0066cc;
+  bottom: 0;
+  height: 100px;
+  position: fixed;
+  width: 100%;
 }
