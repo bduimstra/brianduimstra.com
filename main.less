@@ -1,0 +1,63 @@
+// imports
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+// variables
+
+// colors
+@black: #000;
+@white: #fff;
+@grey: #dedede;
+@blue: #06c;
+
+// fonts
+@mainFont: 'Roboto Condensed', sans-serif;
+
+// mixins
+.defaultFont {
+    font-family: @mainFont;
+}
+
+// resets
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    font-size: 100%;
+    .defaultFont();
+}
+
+header {
+    h1 {
+        color: darken(@grey, 10%);
+        display: inline-block;
+        font-size: 3rem;
+        font-weight: 100;
+        line-height: 3rem;
+        margin: 0;
+        padding: 0;
+        width: 90%;
+    }
+    
+    nav {
+        & > span {
+            color: @blue;
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+
+        cursor: pointer;
+        float: right;
+        text-align: center;
+        width: 3rem;
+    }
+}
+
+main {
+    p {
+        color: darken(@grey, 40%);
+        font-size: 1em;
+        margin: .25em 0;
+    }
+}
