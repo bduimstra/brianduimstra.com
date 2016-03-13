@@ -24,8 +24,8 @@
 }
 
 body {
-    font-size: 100%;
     .defaultFont();
+    font-size: 100%;
     margin: 0;
     padding: 0;
 }
@@ -34,11 +34,11 @@ header {
     h1 {
         color: darken(@grey, 10%);
         display: inline-block;
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 100;
-        line-height: 3rem;
+        line-height: 2rem;
         margin: 0;
-        padding: 0;
+        padding: 1rem;
         width: 90%;
     }
     
@@ -46,7 +46,39 @@ header {
         & > span {
             color: @blue;
             font-size: 2rem;
-            line-height: 3rem;
+            line-height: 4rem;
+        }
+        
+        ul {
+            border-style: dashed;
+            border-color: @grey;
+            border-width: 1px 0 1px 1px;
+            box-shadow: -1px 3px 5px 2px rgba(0, 0, 0, 0.05);
+            display: none;
+            list-style: none;
+            padding: 0 1rem 0 0;
+            position: absolute;
+            right: 0;
+            text-align: right;
+            top: 3rem;
+            width: 100px;
+            
+            li,
+            a {
+                transition: 100ms linear all;
+            }
+            
+            li {
+                padding: 1rem;
+                
+                &:hover {
+                    background-color: @blue;
+                    
+                    a {
+                        color: @white;
+                    }
+                }
+            }
         }
 
         cursor: pointer;
